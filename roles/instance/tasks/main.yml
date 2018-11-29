@@ -1,0 +1,17 @@
+---
+# tasks file for instance
+  - name: Create a new instance and attaches to a network and passes metadata to the instance
+    os_server:
+       state: present
+       auth:
+         auth_url: http://172.16.5.208/identity/v3
+         username: admin
+         password: secret
+         project_name: test
+       name: vm2
+       image: 0e64fee0-7415-461d-a03d-66a486b4aabf
+       key_name: clave
+       timeout: 200
+       flavor: 2
+       state: present
+       auto_ip: yes

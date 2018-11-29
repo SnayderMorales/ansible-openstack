@@ -1,0 +1,9 @@
+---
+# This playbook deploys the whole application stack in this site.
+
+- name: create a new instance
+  hosts: localhost
+  remote_user: stack
+
+  roles:
+    - instance
